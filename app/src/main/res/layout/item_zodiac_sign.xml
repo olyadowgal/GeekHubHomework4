@@ -1,17 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:orientation="vertical"
-              android:layout_width="wrap_content"
-              android:layout_height="wrap_content">
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:tools="http://schemas.android.com/tools"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto"
+                                             android:orientation="vertical"
+                                             android:layout_width="match_parent"
+                                             android:layout_gravity="center"
+                                             android:layout_height="wrap_content">
 
     <ImageView
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/zodiac_name"
             android:id="@+id/zodiac_image"
-            android:layout_width="90dp"
-            android:layout_height="90dp"/>
+            android:padding="8dp"
+            app:layout_constraintDimensionRatio="1:1"
+            android:scaleType="fitCenter"
+            tools:src="@drawable/aquarius"
+            android:layout_width="0dp"
+            android:layout_height="0dp"/>
 
     <TextView
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/zodiac_image"
             android:id="@+id/zodiac_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-
-</LinearLayout>
+            android:layout_width="0dp"
+            android:fontFamily="casual"
+            android:textSize="20dp"
+            tools:text="test"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"/>
+</android.support.constraint.ConstraintLayout>
